@@ -77,7 +77,6 @@ export default function DashboardPage() {
     {
       title: "Total Penghuni",
       value: totalResident,
-      change: "+12%",
       changeType: "increase",
       icon: FaUsers,
       gradient: "from-blue-500 to-blue-600",
@@ -86,7 +85,6 @@ export default function DashboardPage() {
     {
       title: "Total Pemasukan",
       value: formatRupiah(totalSummary.total_pemasukan),
-      change: "+15%",
       changeType: "increase",
       icon: FaArrowUp,
       gradient: "from-green-500 to-green-600",
@@ -95,7 +93,6 @@ export default function DashboardPage() {
     {
       title: "Total Pengeluaran",
       value: formatRupiah(totalSummary.total_pengeluaran),
-      change: "+8%",
       changeType: "increase",
       icon: FaArrowDown,
       gradient: "from-red-500 to-red-600",
@@ -104,7 +101,6 @@ export default function DashboardPage() {
     {
       title: "Saldo Bersih",
       value: formatRupiah(totalSummary.saldo),
-      change: "+22%",
       changeType: "increase",
       icon: FaMoneyBillWave,
       gradient: "from-purple-500 to-purple-600",
@@ -172,20 +168,6 @@ export default function DashboardPage() {
                     className={`p-3 rounded-xl bg-gradient-to-r ${card.gradient} shadow-lg`}
                   >
                     <IconComponent className="text-white" size={24} />
-                  </div>
-                  <div
-                    className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
-                      card.changeType === "increase"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-red-100 text-red-800"
-                    }`}
-                  >
-                    {card.changeType === "increase" ? (
-                      <FaArrowUp size={10} />
-                    ) : (
-                      <FaArrowDown size={10} />
-                    )}
-                    {card.change}
                   </div>
                 </div>
                 <h3 className="text-gray-600 text-sm font-medium mb-1">
